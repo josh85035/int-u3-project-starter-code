@@ -6,7 +6,9 @@
 .option-one-end, 
 .option-two-end,
 .option-two-good,
-.option-one-bad  {
+.option-one-bad,
+.option-two-bad,
+.option-one-good  {
    display: none;
 }
 
@@ -22,21 +24,33 @@ body {
 /* Style the body with a background color or image if desired */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #d6ffe094;
     text-align: center;
     padding: 20px;
 }
 
+
+
 /* Style the title of your story */
 .title {
+    display: flex;
+    justify-content: space-between;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
+    font-family: jokerman;
+}
+
+.unmute{
+    justify-content: space-between;
+    font-size: 12px;
+
+
 }
 
 /* Style the story opening container */
 .story-opening {
-    background-color: #fff;
+    background-color: #ffffff;
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 10px;
@@ -66,7 +80,7 @@ button {
     font-size: 16px;
     padding: 10px 20px;
     margin: 10px;
-    background-color: #007bff;
+    background-color: #864a00;
     color: #fff;
     border: none;
     border-radius: 5px;

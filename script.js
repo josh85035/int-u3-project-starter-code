@@ -1,6 +1,20 @@
 // Declare variables below to save the different divs of your story.
 
 let opening = document.querySelector(".story-opening");
+let nameDisplay = document.querySelector(".player-name");
+let input = document.querySelector(".player-name-input");
+
+
+//name
+let enterButton = document.querySelector(".enter-button");
+enterButton.addEventListener("click", function() {
+    let playerName = input.value.trim();
+    if (playerName !== "") {
+        nameDisplay.textContent = playerName;
+        nameDisplay.style.display = "flex";
+        nameDisplay.style.justifyContent = "flex-end";
+    }
+});
 
 
 let optionOneScreen = document.querySelector(".option-one-screen");
@@ -23,24 +37,23 @@ let thirdOptionTwo = document.querySelector(".third-option-two");
 let fourthOptionOne = document.querySelector(".fourth-option-one");
 let fourtOptionTwo = document.querySelector(".fourth-option-two");
 
-let optionTwoGood = document.querySelector(".option-two-good");
+
 let fifthOptionOne = document.querySelector(".fifth-option-one");
+let fifthOptionTwo = document.querySelector(".fifth-option-two")
 
 let optionOneEnd = document.querySelector(".option-one-end");
 let optionOneBad = document.querySelector(".option-one-bad");
+let optionOneGood = document.querySelector(".option-one-good");
 
-// When you're ready to make event handlers, uncomment the code below. 
-//  - Then fill in the blanks with the correct variables.
+let optionTwoGood = document.querySelector(".option-two-good");
+let optionTwoBad = document.querySelector(".option-two-bad");
 
-//
+
+
+//first choice
 optionOne.addEventListener("click", function(){
  opening.style.display = "none";
  optionOneScreen.style.display = "block";
-});
-
-secondOptionOne.addEventListener("click", function(){
- optionOneScreen.style.display = "none";
- optionOneEnd.style.display = "block";
 });
 
 optionTwo.addEventListener("click", function(){
@@ -48,22 +61,46 @@ optionTwo.addEventListener("click", function(){
  optionTwoScreen.style.display = "block";
 });
 
+//second choice
+secondOptionOne.addEventListener("click", function(){
+ optionOneScreen.style.display = "none";
+ optionOneEnd.style.display = "block";
+});
+
+secondOptionTwo.addEventListener("click", function(){
+optionOneScreen.style.display="none";
+optionTwoScreen.style.display="block";
+})
+
+//thirdchoice
 thirdOptionOne.addEventListener("click", function(){
  optionTwoScreen.style.display = "none";
  optionThreeScreen.style.display = "block";
 });
 
+thirdOptionTwo.addEventListener("click", function(){
+ optionTwoScreen.style.display = "none";
+ optionOneScreen.style.display="block";
+});
+
+//fourth choice
 fourthOptionOne.addEventListener("click", function(){
  optionThreeScreen.style.display = "none";
  optionTwoGood.style.display="block";
 });
+
+fourtOptionTwo.addEventListener("click", function(){
+ optionThreeScreen.style.display="none";
+ optionTwoBad.style.display="block";
+});
+
 
 fifthOptionOne.addEventListener("click", function(){
     optionOneEnd.style.display="none";
     optionOneBad.style.display="block";
 });
 
-secondOptionTwo.addEventListener("click", function(){
-    optionOneScreen.style.display="none";
-    optionTwoScreen.style.display="block";
+fifthOptionTwo.addEventListener("click", function(){
+    optionOneEnd.style.display="none";
+    optionOneGood.style.display="block";
 });
